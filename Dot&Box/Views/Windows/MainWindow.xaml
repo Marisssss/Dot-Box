@@ -4,9 +4,57 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dot_Box"
+        xmlns:vm="clr-namespace:Dot_Box.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="{Binding Path=Title}" 
+        Height="1000" Width="1000">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Точки и коробки" Grid.ColumnSpan="6" x:Name="textLabel" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="120" Margin="40,52,0,0" Grid.RowSpan="2" Height="NaN" Width="NaN"/>
+        <Button Grid.Column="1" Content="Выйти" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="144" Width="494" FontSize="64" FontFamily="Inter Tight Medium" Margin="83,20,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDCF6FF"/>
+                    <GradientStop Color="#FFC7F3FF" Offset="1"/>
+                    <GradientStop Color="#FF58BBDE" Offset="0.17"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="1" Content="Правила игры" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="144" Width="494" FontSize="64" FontFamily="Inter Tight Medium" Margin="83,151,0,0" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDCF6FF"/>
+                    <GradientStop Color="#FFC7F3FF" Offset="1"/>
+                    <GradientStop Color="#FF58BBDE" Offset="0.17"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="1" Content="Играть" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="144" Width="494" FontSize="64" FontFamily="Inter Tight Medium" Margin="83,123,0,0" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDCF6FF"/>
+                    <GradientStop Color="#FFC7F3FF" Offset="1"/>
+                    <GradientStop Color="#FF58BBDE" Offset="0.17"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

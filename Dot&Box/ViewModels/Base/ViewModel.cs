@@ -1,24 +1,30 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Dot_Box.ViewModels.Base
 {
     internal abstract class ViewModel : INotifyPropertyChanged
+
+{
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected virtual void OnPropertyChanged([CallerMemberName] string PropertyName = null)
     {
-        public event PropertyChangingEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged([CallerMemberName]string PropertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));        
-        }
-
-        protected virtual bool Sel<T>(ref T field, T value, [CallerMemberName] string PeopserName= null)
-        {
-            if (Equals(field, value)) return false;
-            field = value;
-            OnPropertyChanged(PropertyName);
-            return true;
-        }
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
     }
+
+    protected virtual bool Set<T>(ref T fied, T value, [CallerMemberName] string PropertyName = null)
+    {
+        if (Equals(fied, value)) return false;
+        fied = value;
+        OnPropertyChanged(PropertyName);
+        return true;
+    }
+}
+
 }
