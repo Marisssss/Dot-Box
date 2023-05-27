@@ -1,0 +1,47 @@
+﻿<Page x:Class="Dot_Box.Views.Pages.Rules"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dot_Box.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1000"
+      Title="Rules"
+      Background="White">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/1osnova.jpg"/>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Center" Height="487" Margin="0,138,0,0" Stroke="Black" VerticalAlignment="Top" Width="930" Fill="White"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="491" FontSize="30" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="880">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="Точки и квадратики - это простая игра с простой целью: "/><LineBreak/><Run Text="выигрывает тот, у кого будет больше всего ящиков в конце игры.  "/><LineBreak/><Run Text="Вы и ваш оппонент по очереди рисуете горизонтальные или вертикальные линии, чтобы соединить квадраты.  "/><LineBreak/><Run Text="Когда кто-то рисует линию, которая завершает прямоугольник, выводится инициал внутри, чтобы выиграть ящик.  "/><LineBreak/><Run Text="Как только все точки будут соединены, подсчитываются коробки и определится победитель."/></TextBlock>
+        <Button HorizontalAlignment="Center" Margin="0,711,0,0" VerticalAlignment="Top" Height="85" Width="315" Click="Button_Click_1" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDCF6FF"/>
+                    <GradientStop Color="#FFC7F3FF" Offset="1"/>
+                    <GradientStop Color="#FF58BBDE" Offset="0.17"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button Content="Играть" FontSize="40" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        </Button>
+        <Button HorizontalAlignment="Center" Margin="0,813,0,0" VerticalAlignment="Top" Height="85" Width="316" Click="Button_Click_1" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDCF6FF"/>
+                    <GradientStop Color="#FFC7F3FF" Offset="1"/>
+                    <GradientStop Color="#FF58BBDE" Offset="0.17"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button Content="Меню" FontSize="40" BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click_1"/>
+        </Button>
+    </Grid>
+</Page>

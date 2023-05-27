@@ -12,24 +12,10 @@
         <vm:MainWindowViewModel/>
     </Window.DataContext>
     <Grid x:Name="MainGrid">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Text="Точки и коробки" Grid.ColumnSpan="6" x:Name="textLabel" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="120" Margin="40,52,0,0" Grid.RowSpan="2" Height="NaN" Width="NaN"/>
-        <Button Grid.Column="1" Content="Выйти" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="144" Width="494" FontSize="64" FontFamily="Inter Tight Medium" Margin="83,20,0,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/1osnova.jpg"/>
+        </Grid.Background>
+        <Button Content="Выйти" Command="{Binding CloseApplicationCommand}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="157" Width="494" FontSize="60" Margin="0,717,0,0" Click="Button_Click_2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFDCF6FF"/>
@@ -38,7 +24,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Grid.Column="1" Content="Правила игры" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="144" Width="494" FontSize="64" FontFamily="Inter Tight Medium" Margin="83,151,0,0" Grid.RowSpan="2">
+        <Button HorizontalAlignment="Center" Margin="0,512,0,0" VerticalAlignment="Top" Height="156" Width="494" Click="Button_Click_1" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFDCF6FF"/>
@@ -46,8 +32,9 @@
                     <GradientStop Color="#FF58BBDE" Offset="0.17"/>
                 </LinearGradientBrush>
             </Button.Background>
+            <Button Content="Правила игры" FontSize="60" BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click_1"/>
         </Button>
-        <Button Grid.Column="1" Content="Играть" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="144" Width="494" FontSize="64" FontFamily="Inter Tight Medium" Margin="83,123,0,0" Grid.RowSpan="2">
+        <Button HorizontalAlignment="Center" Margin="0,302,0,0" VerticalAlignment="Top" Height="155" Width="494" Click="Button_Click_1" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFDCF6FF"/>
@@ -55,6 +42,19 @@
                     <GradientStop Color="#FF58BBDE" Offset="0.17"/>
                 </LinearGradientBrush>
             </Button.Background>
+            <Button Content="Играть" FontSize="60" BorderBrush="{x:Null}" Background="{x:Null}"/>
         </Button>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="894,88,0,0" Stroke="Black" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" Fill="Red">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-20.065"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <TextBlock Text="Точки и коробки" x:Name="textLabel" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="110" Margin="67,52,0,0" Height="NaN" Width="NaN"/>
+        <Ellipse HorizontalAlignment="Left" Height="58" Margin="126,114,0,0" Stroke="Black" VerticalAlignment="Top" Width="59" Fill="#FF0300FF"/>
     </Grid>
 </Window>

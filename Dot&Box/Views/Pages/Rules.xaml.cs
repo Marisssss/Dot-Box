@@ -13,16 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dot_Box
+namespace Dot_Box.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Rules.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Rules : Page
     {
-        public MainWindow()
+        public Rules()
         {
             InitializeComponent();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -31,11 +36,6 @@ namespace Dot_Box
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
         }
